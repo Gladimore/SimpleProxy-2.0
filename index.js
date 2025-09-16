@@ -3,8 +3,10 @@ const rateLimit = require('express-rate-limit')
 const http = require('http')
 const https = require('https')
 const { URL } = require('url')
+const cors = require('cors')
 
 const app = express()
+app.use(cors())
 
 const PASSWORD = process.env.PROXY_PASSWORD
 
